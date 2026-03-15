@@ -105,7 +105,7 @@ export default function HomePage() {
                 >
                   <Button 
                     size="lg" 
-                    className="bg-amber-500 hover:bg-amber-600 text-lg px-8 py-6 rounded-full shadow-lg mr-4"
+                    className="bg-green-500  border-white hover:bg-amber-800 text-lg px-8 py-6 rounded-full shadow-lg mr-4"
                     onClick={() => router.push("/3d")}
                   >
                     Start Designing
@@ -131,7 +131,7 @@ export default function HomePage() {
                 <p className="text-xl text-white/90 mb-8">Change colors, materials, and dimensions to match your exact style</p>
                 <Button 
                   size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6 rounded-full shadow-lg"
+                  className="bg-transparent border-white text-white hover:bg-white/20 text-lg px-8 py-6 rounded-full"
                   onClick={() => router.push("/products")}
                 >
                   Browse Products

@@ -1,4 +1,4 @@
-// File: C:\Users\ranud\Downloads\3d_furniture\3d_furniture\app\products\page.tsx
+// File: C:\Users\ranud\Downloads\3D_Furniture_web\3d_furnitureweb\app\products\page.tsx
 import * as entry from '../../../../app/products/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

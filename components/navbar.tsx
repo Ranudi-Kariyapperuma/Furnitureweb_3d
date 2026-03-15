@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -14,238 +15,206 @@ interface NavbarProps {
   activePage?: string
 }
 
-export default function Navbar({ isLoggedIn, userRole, onLoginClick, onLogout, activePage = "home" }: NavbarProps) {
+export default function Navbar({
+  isLoggedIn,
+  userRole,
+  onLoginClick,
+  onLogout,
+  activePage = "home",
+}: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const pages = ["home", "products", "gallery", "canvas", "3d", "upload", "about", "contact"]
+
+  const getHref = (page: string) => {
+    if (page === "home") return "/"
+    if (page === "canvas") return "/canvas"
+    if (page === "3d") return "/3d"
+    if (page === "upload") return "/3d/upload"
+    return `/${page}`
+  }
+
+  const getLabel = (page: string) => {
+    if (page === "3d") return "3D Designer"
+    if (page === "canvas") return "2D Designer"
+    if (page === "upload") return "Upload Furniture"
+    return page.charAt(0).toUpperCase() + page.slice(1)
+  }
+
   return (
-    <header className="bg-background border-b sticky top-0 z-50">
+    <header className="sticky top-0 z-50 backdrop-blur-lg bg-white/70 border-b border-green-100 shadow-sm">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+
+        {/* Logo */}
+        <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="FurniCraft logo" className="w-10 h-10 rounded-md object-cover" />
-            <span className="text-xl font-bold">FurniCraft</span>
+            <img
+              src="/logo.png"
+              alt="DesignSpace logo"
+              className="w-10 h-10 rounded-full object-cover border-2 border-green-500 p-1 shadow-md hover:scale-110 transition-transform duration-300"
+            />
+          <span className="text-2xl font-bold text-green-500 drop-shadow-[0_0_5px_#22c55e] drop-shadow-[0_0_12px_#22c55e]">
+  DesignSpace
+</span>
           </Link>
 
-          <nav className="hidden md:flex ml-8">
-            <ul className="flex gap-6">
-              <li>
-                <Link
-                  href="/"
-                  className={`${activePage === "home" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className={`${activePage === "products" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gallery"
-                  className={`${activePage === "gallery" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                >
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/canvas"
-                  className={`${activePage === "canvas" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                >
-                  2D Designer
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/3d"
-                  className={`${activePage === "3d" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                >
-                  3D Designer
-                </Link>
-              </li>
-              {/* Show Upload Furniture only for admin */}
-              {userRole === "admin" && (
-                <li>
-                  <Link
-                    href="/3d/upload"
-                    className={`${activePage === "upload" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                  >
-                    Upload Furniture
-                  </Link>
-                </li>
-              )}
-              <li>
-                <Link
-                  href="/about"
-                  className={`${activePage === "about" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className={`${activePage === "contact" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600`}
-                >
-                  Contact
-                </Link>
-              </li>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex ml-10">
+            <ul className="flex gap-7">
+              {pages.map((page) => {
+                if (page === "upload" && userRole !== "admin") return null
+
+                return (
+                  <li key={page}>
+                    <Link
+                      href={getHref(page)}
+                      className={`relative px-1 py-1 font-medium transition-colors duration-300
+                      ${
+                        activePage === page
+                           ? "text-green-600 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+                          : "text-gray-700 hover:text-green-600"
+                      }
+                      
+                      before:absolute before:-bottom-1 before:left-0 before:h-[3px] before:w-full 
+                      before:bg-green-500 before:rounded-full before:origin-left
+                      before:transition-transform before:duration-300
+                      ${
+                        activePage === page
+                          ? "before:scale-x-100"
+                          : "before:scale-x-0 hover:before:scale-x-100"
+                      }`}
+                    >
+                      {getLabel(page)}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* Right Side */}
+        <div className="flex items-center gap-3">
           <ThemeSwitcher />
 
           {isLoggedIn ? (
             <div className="hidden md:flex items-center gap-3">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <User className="h-4 w-4" />
-                <span>{userRole === "admin" ? "Administrator" : "User"}</span>
+              
+              <div className="flex items-center gap-2 text-sm text-gray-500 hover:text-green-600 transition-colors">
+                <User className="h-5 w-5" />
+                <span>{userRole === "admin" ? "Admin" : "User"}</span>
               </div>
-              <Button variant="ghost" size="sm" onClick={onLogout} className="flex items-center gap-1">
+
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={onLogout}
+                className="flex items-center gap-1 bg-green-50 hover:bg-green-100 border border-green-200 shadow-sm hover:shadow-green-300/30 transition-all"
+              >
                 <LogOut className="h-4 w-4" />
-                <span>Logout</span>
+                Logout
               </Button>
             </div>
           ) : (
-            <Button variant="outline" size="sm" onClick={onLoginClick} className="hidden md:flex items-center gap-1">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={onLoginClick}
+              className="hidden md:flex items-center gap-1 border-green-500 text-green-600 hover:bg-green-50 hover:shadow-green-300/30 transition-all"
+            >
               <LogIn className="h-4 w-4" />
-              <span>Login</span>
+              Login
             </Button>
           )}
 
+          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-gray-700 hover:text-green-600"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
           >
             <Menu className="h-6 w-6" />
           </Button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background border-t py-4 px-4 shadow-md">
-          <nav className="space-y-4">
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/"
-                  className={`${activePage === "home" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className={`${activePage === "products" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gallery"
-                  className={`${activePage === "gallery" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/canvas"
-                  className={`${activePage === "canvas" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  2D Designer
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/3d"
-                  className={`${activePage === "3d" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  3D Designer
-                </Link>
-              </li>
-              {/* Show Upload Furniture only for admin */}
-              {userRole === "admin" && (
-                <li>
+        <div className="md:hidden bg-white/90 backdrop-blur-lg border-t border-green-100 shadow-lg py-5 px-4 animate-slide-down">
+          <ul className="flex flex-col gap-4">
+            {pages.map((page) => {
+              if (page === "upload" && userRole !== "admin") return null
+
+              return (
+                <li key={page}>
                   <Link
-                    href="/3d/upload"
-                    className={`${activePage === "upload" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
+                    href={getHref(page)}
+                    className={`block py-2 px-3 rounded-lg font-medium transition-all
+                    ${
+                      activePage === page
+                        ? "bg-green-100 text-green-600"
+                        : "text-gray-700 hover:bg-green-50 hover:text-green-600"
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Upload Furniture
+                    {getLabel(page)}
                   </Link>
                 </li>
-              )}
-              <li>
-                <Link
-                  href="/about"
-                  className={`${activePage === "about" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className={`${activePage === "contact" ? "text-amber-600 font-medium" : "text-foreground"} hover:text-amber-600 block`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+              )
+            })}
+          </ul>
+
+          <div className="pt-4 border-t border-green-100 flex flex-col gap-3">
 
             {isLoggedIn ? (
-              <div className="pt-3 border-t flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <User className="h-4 w-4" />
-                  <span>{userRole === "admin" ? "Administrator" : "User"}</span>
+              <>
+                <div className="flex items-center gap-2 text-sm text-gray-500">
+                  <User className="h-5 w-5" />
+                  <span>{userRole === "admin" ? "Admin" : "User"}</span>
                 </div>
+
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={onLogout}
-                  className="flex items-center gap-1 w-full justify-center"
+                  className="flex items-center gap-2 justify-center w-full bg-green-50 hover:bg-green-100 border-green-200"
                 >
                   <LogOut className="h-4 w-4" />
-                  <span>Logout</span>
+                  Logout
                 </Button>
-              </div>
+              </>
             ) : (
-              <div className="pt-3 border-t">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={onLoginClick}
-                  className="flex items-center gap-1 w-full justify-center"
-                >
-                  <LogIn className="h-4 w-4" />
-                  <span>Login</span>
-                </Button>
-              </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={onLoginClick}
+                className="flex items-center gap-2 justify-center w-full border-green-500 text-green-600 hover:bg-green-50"
+              >
+                <LogIn className="h-4 w-4" />
+                Login
+              </Button>
             )}
-          </nav>
+          </div>
         </div>
       )}
+
+      <style jsx>{`
+        @keyframes slide-down {
+          0% {
+            transform: translateY(-20px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        .animate-slide-down {
+          animation: slide-down 0.25s ease-out forwards;
+        }
+      `}</style>
     </header>
   )
 }
