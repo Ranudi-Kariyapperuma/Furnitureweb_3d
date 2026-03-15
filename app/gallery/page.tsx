@@ -133,10 +133,10 @@ export default function GalleryPage() {
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
                 <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-64 object-cover" />
-                <div className="p-4">
+                <div className="p-4 bg-neutral-800">
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <Button variant="outline" size="sm" onClick={() => viewGalleryDetails(item)}>
+                  <Button className="bg-lime-500 text-black hover:bg-lime-600" size="sm" onClick={() => viewGalleryDetails(item)}>
                     View Details
                   </Button>
                 </div>
@@ -148,17 +148,17 @@ export default function GalleryPage() {
             <TabsContent
               key={category}
               value={category}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {galleryItems
                 .filter((item) => item.category === category)
                 .map((item) => (
                   <div
                     key={item.id}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                    className=" rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
                   >
                     <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-64 object-cover" />
-                    <div className="p-4">
+                    <div className="p-4 ">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-gray-600 mb-4">{item.description}</p>
                       <Button variant="outline" size="sm" onClick={() => viewGalleryDetails(item)}>
