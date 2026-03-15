@@ -140,12 +140,12 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Dinitha Wickramasinghe", image: "/images/about/team/dinitha.jpg" },
-              { name: "Ranawaka Perera", image: "/images/about/team/ranawaka.jpg" },
-              { name: "Mohammed Umair", image: "/images/about/team/umair.jpg" },
-              { name: "Kenula Andradi", image: "/images/about/team/kenula.jpg" },
-              { name: "Roshane Perera", image: "/images/about/team/roshane.jpg" },
-              { name: "Mathew Lakruwan", image: "/images/about/team/mathew.jpg" },
+              { name: "Mandinu Balasooriya", image: "/images/about/team/dinitha.jpg" },
+              { name: "Sanuda De Silva", image: "/images/about/team/ranawaka.jpg" },
+              { name: "Kadangoda Jayarathna", image: "/images/about/team/umair.jpg" },
+              { name: "Denethmi Aththanayaka", image: "/images/about/team/kenula.jpg" },
+              { name: "Naduni Kodikara", image: "/images/about/team/roshane.jpg" },
+              { name: "Ranudi Kariyapperuma", image: "/images/about/team/mathew.jpg" },
             ].map((member, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md text-center">
                 <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-64 object-cover" />
