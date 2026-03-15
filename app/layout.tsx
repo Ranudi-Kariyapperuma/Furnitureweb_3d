@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "FurniCraft - 3D Furniture Configurator",
+  title: "DesignSpace - 3D Furniture Configurator",
   description: "Design and customize your furniture in 3D",
   generator: "v0.dev",
 }
