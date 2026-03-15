@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
-          <p>© 2023 FurniCraft. All rights reserved.</p>
+          <p>© 2026 DesignSpace. All rights reserved.</p>
         </div>
       </div>
     </footer>
