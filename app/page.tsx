@@ -389,14 +389,7 @@ export default function HomePage() {
               >
                 Start Designing Now
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white/20 text-lg px-8"
-                onClick={() => router.push("/setup")}
-              >
-                View Setup Guide
-              </Button>
+             
             </div>
           </motion.div>
         </div>

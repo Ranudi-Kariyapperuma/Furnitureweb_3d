@@ -1,8 +1,7 @@
 {
-  "/about/page": "app/about/page.js",
   "/page": "app/page.js",
   "/gallery/page": "app/gallery/page.js",
-  "/contact/page": "app/contact/page.js",
   "/canvas/page": "app/canvas/page.js",
-  "/products/page": "app/products/page.js"
+  "/products/page": "app/products/page.js",
+  "/3d/page": "app/3d/page.js"
 }
