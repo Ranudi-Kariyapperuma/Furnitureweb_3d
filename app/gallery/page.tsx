@@ -155,13 +155,13 @@ export default function GalleryPage() {
                 .map((item) => (
                   <div
                     key={item.id}
-                    className=" rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                    className="  bg-neutral-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
                   >
                     <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-64 object-cover" />
                     <div className="p-4 ">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-gray-600 mb-4">{item.description}</p>
-                      <Button variant="outline" size="sm" onClick={() => viewGalleryDetails(item)}>
+                      <Button className="bg-lime-500 text-black hover:bg-lime-600" size="sm" onClick={() => viewGalleryDetails(item)}>
                         View Details
                       </Button>
                     </div>

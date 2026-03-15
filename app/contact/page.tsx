@@ -259,7 +259,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+            <div className="bg-neutral-800 p-6 rounded-lg shadow-md mb-8">
               <h2 className="text-xl font-semibold mb-4">Our Office</h2>
               <div className="space-y-3">
                 <p className="flex items-start">
@@ -312,7 +312,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-neutral-800 p-6 rounded-lg shadow-md">
               <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
               <ul className="space-y-2">
                 <li className="flex justify-between">
@@ -330,7 +330,7 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 ">
               <img src="/images/homagama-map.png" alt="Map of Homagama, Sri Lanka" className="w-full h-full object-cover rounded-md" />
             </div>
           </div>
