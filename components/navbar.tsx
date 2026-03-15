@@ -120,7 +120,7 @@ export default function Navbar({
               variant="outline"
               size="sm"
               onClick={onLoginClick}
-              className="hidden md:flex items-center gap-1 border-lime-500 text-lime-600 hover:bg-green-50 hover:shadow-green-300/30 transition-all"
+              className="hidden md:flex items-center gap-1 border-lime-500 text-lime-600 hover:bg-green-600 hover:shadow-green-300/30 transition-all"
             >
               <LogIn className="h-4 w-4" />
               Login
@@ -189,7 +189,7 @@ export default function Navbar({
                 variant="outline"
                 size="sm"
                 onClick={onLoginClick}
-                className="flex items-center gap-2 justify-center w-full border-green-500 text-green-600 hover:bg-green-50"
+                className="flex items-center gap-2 justify-center w-full border-green-500 text-green-600"
               >
                 <LogIn className="h-4 w-4" />
                 Login
