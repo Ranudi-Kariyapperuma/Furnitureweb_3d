@@ -1,7 +1,9 @@
 {
-  "/about/page": "app/about/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/3d/page": "app/3d/page.js",
   "/gallery/page": "app/gallery/page.js",
+  "/canvas/page": "app/canvas/page.js",
   "/setup/page": "app/setup/page.js",
-  "/canvas/page": "app/canvas/page.js"
+  "/contact/page": "app/contact/page.js",
+  "/about/page": "app/about/page.js"
 }

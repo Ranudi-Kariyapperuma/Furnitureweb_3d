@@ -45,8 +45,8 @@ export default function AboutPage() {
 
       <main className="flex-1 container mx-auto px-4 py-8">
         <section className="mb-16">
-          <h1 className="text-4xl font-bold mb-4">About FurniCraft</h1>
-          <div className="flex flex-col md:flex-row gap-8 items-center">
+        <h1 className="text-4xl font-bold flex justify-center md:justify-start ">About DesignSpace</h1>
+          <div className="flex flex-col md:flex-row gap-5 items-center">
             <div className="md:w-1/2">
               <p className="text-lg mb-4">
                 Founded in 2010, FurniCraft has been at the forefront of innovative furniture design and customization.
@@ -61,9 +61,14 @@ export default function AboutPage() {
                 state-of-the-art 3D configurator to help you visualize and create your perfect space.
               </p>
             </div>
-            <div className="md:w-1/2">
-              <img src="/images/about/workshop.jpg" alt="FurniCraft workshop" className="rounded-lg shadow-lg w-full" />
-            </div>
+            <div className="md:w-1/2 flex justify-center md:justify-end">
+  <img
+    src="/images/about/workshop.jpg"
+    alt="FurniCraft workshop"
+    className="rounded-lg shadow-lg"
+    style={{ width: '500px' }}
+  />
+</div>
           </div>
         </section>
 
@@ -145,10 +150,10 @@ export default function AboutPage() {
               { name: "Kadangoda Jayarathna", image: "/images/about/team/umair.jpg" },
               { name: "Denethmi Aththanayaka", image: "/images/about/team/kenula.jpg" },
               { name: "Naduni Kodikara", image: "/images/about/team/roshane.jpg" },
-              { name: "Ranudi Kariyapperuma", image: "/images/about/team/mathew.jpg" },
+              { name: "Ranudi Kariyapperuma", image: "/images/about/team/Ranudi.jpg" },
             ].map((member, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md text-center">
-                <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-64 object-cover" />
+              <div key={index} className="rounded-lg overflow-hidden shadow-md text-center bg-neutral-900">
+                <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-64 object-cover " />
                 <div className="p-4">
                   <h3 className="text-xl font-semibold">{member.name}</h3>
                 </div>
