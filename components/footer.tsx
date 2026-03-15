@@ -21,7 +21,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4  text-white drop-shadow-[0_0_2px_#22c55e] drop-shadow-[0_0_1px_#22c55e]">Contact</h3>
             <p className="text-gray-300">Pitipana</p>
             <p className="text-gray-300">Thalagala Rd, Homagama</p>
-            <p className="text-gray-300">contactdesignspace.com</p>
+            <p className="text-gray-300">contact@designspace.com</p>
             
           </div>
           <div>

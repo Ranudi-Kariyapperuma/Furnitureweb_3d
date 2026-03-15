@@ -139,7 +139,7 @@ export default function FurnitureConfigurator() {
     setHistoryIndex(0)
 
     // Check localStorage for login state
-    const storedUser = localStorage.getItem("furnicraft_user")
+    const storedUser = localStorage.getItem("designspace_user")
     if (storedUser) {
       try {
         const user = JSON.parse(storedUser)
@@ -158,7 +158,7 @@ export default function FurnitureConfigurator() {
       setUserRole("admin")
       setShowLogin(false)
       // Store login state in localStorage
-      localStorage.setItem("furnicraft_user", JSON.stringify({ username, role: "admin" }))
+      localStorage.setItem("designspace_user", JSON.stringify({ username, role: "admin" }))
       toast({
         title: "Logged In",
         description: "Welcome, Administrator!",
@@ -168,7 +168,7 @@ export default function FurnitureConfigurator() {
       setUserRole("user")
       setShowLogin(false)
       // Store login state in localStorage
-      localStorage.setItem("furnicraft_user", JSON.stringify({ username, role: "user" }))
+      localStorage.setItem("designspace_user", JSON.stringify({ username, role: "user" }))
       toast({
         title: "Logged In",
         description: "Welcome! You're logged in as a user.",
@@ -184,7 +184,7 @@ export default function FurnitureConfigurator() {
 
   // Handle logout
   const handleLogout = () => {
-    localStorage.removeItem("furnicraft_user")
+    localStorage.removeItem("designspace_user")
     setIsLoggedIn(false)
     setUserRole(null)
     toast({
@@ -521,7 +521,7 @@ export default function FurnitureConfigurator() {
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
           <Card className="w-full max-w-md">
             <CardContent className="pt-6">
-              <h2 className="text-2xl font-bold text-center mb-6">Welcome to FurniCraft</h2>
+              <h2 className="text-2xl font-bold text-center mb-6  text-lime-500 drop-shadow-[0_0_2px_#22c55e] drop-shadow-[0_0_5px_#22c55e]">Welcome to DesignSpace</h2>
               <p className="text-center mb-6 text-gray-600 dark:text-gray-300">
                 Please log in to use the furniture configurator
               </p>
