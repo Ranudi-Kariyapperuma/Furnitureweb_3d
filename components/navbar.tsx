@@ -95,7 +95,7 @@ export default function Navbar({
 
         {/* Right Side */}
         <div className="flex items-center gap-3">
-          <ThemeSwitcher />
+         
 
           {isLoggedIn ? (
             <div className="hidden md:flex items-center gap-3">

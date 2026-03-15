@@ -252,7 +252,7 @@ export default function HomePage() {
             <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4">
               Featured Products
             </motion.h2>
-            <motion.p variants={itemVariants} className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <motion.p variants={itemVariants} className="text-xl text-lime-100 max-w-2xl mx-auto">
               Browse our curated selection of high-quality furniture
             </motion.p>
           </motion.div>
@@ -280,8 +280,8 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4">
                       <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                      <Button className="bg-white text-black hover:bg-white/90" size="sm">
-                        View Details
+                      <Button className="bg-black text-white hover:bg-white/90 hover:text-black transition-colors duration-300" size="sm">
+                       View Details
                       </Button>
                     </div>
                   </div>
@@ -291,26 +291,27 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-10">
-            <Button 
-              size="lg" 
-              className="bg-white text-black hover:bg-neutral-100"
-              onClick={() => router.push("/products")}
-            >
-              View All Products
-            </Button>
+            <Button
+  size="lg"
+  className="bg-lime-400 text-black hover:bg-lime-100 hover:text-black transition-colors duration-300"
+  onClick={() => router.push("/products")}
+>
+  View All Products
+</Button>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section ref={featureRef} className="py-20 px-4 md:px-8 container mx-auto">
+      <section ref={featureRef} className="py-20 bg-slate-950">
+        <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           animate={featureInView ? "visible" : "hidden"}
           className="text-center mb-12"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4 text-lime-500">
             Why Choose FurniCraft?
           </motion.h2>
           <motion.p variants={itemVariants} className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -318,7 +319,7 @@ export default function HomePage() {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           {[
             {
               icon: "🏠",
@@ -357,7 +358,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-neutral-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
@@ -365,10 +366,11 @@ export default function HomePage() {
             </motion.div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-amber-500 to-amber-700">
+      <section className="py-16 bg-gradient-to-r from-slate-900 to-lime-400 ">
         <div className="container mx-auto px-4 md:px-8 text-center">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}

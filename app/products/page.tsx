@@ -136,7 +136,7 @@ export default function ProductsPage() {
                     <CardTitle>{product.name}</CardTitle>
                     <CardDescription>{product.category}</CardDescription>
                   </div>
-                  <div className="text-lg font-bold text-amber-600">{product.price}</div>
+                  <div className="text-lg font-bold text-lime-600">{product.price}</div>
                 </div>
               </CardHeader>
               <CardContent>
@@ -146,7 +146,7 @@ export default function ProductsPage() {
                 <Button variant="outline" onClick={() => viewProductDetails(product)}>
                   Details
                 </Button>
-                <Button onClick={() => addToCart(product)}>Add to Cart</Button>
+                <Button  className="bg-lime-600 hover:bg-lime-800" onClick={() => addToCart(product)}>Add to Cart</Button>
               </CardFooter>
             </Card>
           ))}
