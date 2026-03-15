@@ -51,9 +51,9 @@ export default function Navbar({
             <img
               src="/logo.png"
               alt="DesignSpace logo"
-              className="w-10 h-10 rounded-full object-cover border-2 border-green-500 p-1 shadow-md hover:scale-110 transition-transform duration-300"
+              className="w-10 h-10 rounded-full object-cover border-2 border-lime-500 p-1 shadow-md hover:scale-110 transition-transform duration-300"
             />
-          <span className="text-2xl font-bold text-green-500 drop-shadow-[0_0_5px_#22c55e] drop-shadow-[0_0_12px_#22c55e]">
+          <span className="text-2xl font-bold text-lime-500 drop-shadow-[0_0_5px_#22c55e] drop-shadow-[0_0_12px_#22c55e]">
   DesignSpace
 </span>
           </Link>
@@ -71,12 +71,12 @@ export default function Navbar({
                       className={`relative px-1 py-1 font-medium transition-colors duration-300
                       ${
                         activePage === page
-                           ? "text-green-600 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
-                          : "text-gray-700 hover:text-green-600"
+                           ? "text-lime-600 drop-shadow-[0_0_6px_rgba(34,197,94,0.8)]"
+                          : "text-gray-700 hover:text-lime-600"
                       }
                       
                       before:absolute before:-bottom-1 before:left-0 before:h-[3px] before:w-full 
-                      before:bg-green-500 before:rounded-full before:origin-left
+                      before:bg-lime-500 before:rounded-full before:origin-left
                       before:transition-transform before:duration-300
                       ${
                         activePage === page
@@ -120,7 +120,7 @@ export default function Navbar({
               variant="outline"
               size="sm"
               onClick={onLoginClick}
-              className="hidden md:flex items-center gap-1 border-green-500 text-green-600 hover:bg-green-50 hover:shadow-green-300/30 transition-all"
+              className="hidden md:flex items-center gap-1 border-lime-500 text-lime-600 hover:bg-green-50 hover:shadow-green-300/30 transition-all"
             >
               <LogIn className="h-4 w-4" />
               Login

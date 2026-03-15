@@ -105,7 +105,7 @@ export default function HomePage() {
                 >
                   <Button 
                     size="lg" 
-                    className="bg-green-500  border-white hover:bg-amber-800 text-lg px-8 py-6 rounded-full shadow-lg mr-4"
+                    className="bg-lime-700  border-white hover:bg-amber-800 text-lg px-8 py-6 rounded-full shadow-lg mr-4"
                     onClick={() => router.push("/3d")}
                   >
                     Start Designing
@@ -156,7 +156,8 @@ export default function HomePage() {
       </section>
 
      
-      <section className="py-20 px-4 md:px-8 container mx-auto">
+      <section className="py-16 bg-slate-950 text-white">
+         <div className="container mx-auto px-4 md:px-8">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -164,7 +165,7 @@ export default function HomePage() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4 text-lime-500">
             Powerful Design Tools
           </motion.h2>
           <motion.p variants={itemVariants} className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -178,9 +179,9 @@ export default function HomePage() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            className="bg-neutral-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="h-56 bg-amber-50 flex items-center justify-center p-6">
+            <div className="h-56 bg-amber-50 relative">
               <div className="relative w-full h-full">
                 <Image 
                   src="/images/hero/2Dhero.jpg" 
@@ -192,7 +193,7 @@ export default function HomePage() {
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4">2D Designer</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-00 mb-6">
                 Upload your room photo and see how furniture fits in your actual space. Perfect for visualizing your ideas before making a purchase.
               </p>
               <Button 
@@ -209,9 +210,9 @@ export default function HomePage() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            className="bg-neutral-800  rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="h-56 bg-blue-50 flex items-center justify-center p-6">
+            <div className="h-56 bg-gray-400 relative">
               <div className="relative w-full h-full">
                 <Image 
                   src="/images/hero/3Dhero.jpg" 
@@ -234,6 +235,7 @@ export default function HomePage() {
               </Button>
             </div>
           </motion.div>
+         </div>
         </div>
       </section>
 
