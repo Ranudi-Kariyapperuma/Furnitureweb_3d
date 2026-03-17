@@ -1,1 +1,0 @@
-{"c":["app/layout","app/page","app/products/page","app/gallery/page","app/canvas/page","app/3d/page","app/about/page","app/contact/page","app/setup/page","webpack"],"r":[],"m":["(app-pages-browser)/./components/theme-switcher.tsx","(app-pages-browser)/./node_modules/lucide-react/dist/esm/icons/moon.js","(app-pages-browser)/./node_modules/lucide-react/dist/esm/icons/sun.js"]}
