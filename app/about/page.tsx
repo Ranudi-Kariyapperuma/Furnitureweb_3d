@@ -147,7 +147,7 @@ export default function AboutPage() {
             {[
               { name: "Mandinu Balasooriya", image: "/images/about/team/mandinu.png" },
               { name: "Sanuda De Silva", image: "/images/about/team/sanuda.jpg" },
-              { name: "Kadangoda Jayarathna", image: "/images/about/team/devinda.jpg" },
+              { name: "Devinda Thilina", image: "/images/about/team/devinda.jpg" },
               { name: "Denethmi Aththanayaka", image: "/images/about/team/denethmi.jpg" },
               { name: "Naduni Kodikara", image: "/images/about/team/naduni.jpg" },
               { name: "Ranudi Kariyapperuma", image: "/images/about/team/Ranudi.jpg" },
