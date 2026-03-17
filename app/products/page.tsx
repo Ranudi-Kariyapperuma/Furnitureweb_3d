@@ -18,7 +18,6 @@ export default function ProductsPage() {
   const [showProductDetails, setShowProductDetails] = useState(false)
   const { toast } = useToast()
 
-  // Move localStorage access to useEffect
   useEffect(() => {
     // Check localStorage for login state
     const storedUser = localStorage.getItem("furnicraft_user")
