@@ -838,9 +838,6 @@ video {
 .mt-auto {
   margin-top: auto;
 }
-.ml-3 {
-  margin-left: 0.75rem;
-}
 .block {
   display: block;
 }
@@ -1651,6 +1648,10 @@ video {
 }
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
+}
+.bg-neutral-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
 }
 .bg-\[url\(\'\/images\/hero\/hero\.jpg\'\)\] {
   background-image: url('/images/hero/hero.jpg');

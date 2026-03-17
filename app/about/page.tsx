@@ -145,14 +145,14 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Mandinu Balasooriya", image: "/images/about/team/dinitha.jpg" },
-              { name: "Sanuda De Silva", image: "/images/about/team/ranawaka.jpg" },
-              { name: "Kadangoda Jayarathna", image: "/images/about/team/umair.jpg" },
-              { name: "Denethmi Aththanayaka", image: "/images/about/team/kenula.jpg" },
-              { name: "Naduni Kodikara", image: "/images/about/team/roshane.jpg" },
+              { name: "Mandinu Balasooriya", image: "/images/about/team/mandinu.png" },
+              { name: "Sanuda De Silva", image: "/images/about/team/sanuda.jpg" },
+              { name: "Kadangoda Jayarathna", image: "/images/about/team/devinda.jpg" },
+              { name: "Denethmi Aththanayaka", image: "/images/about/team/denethmi.jpg" },
+              { name: "Naduni Kodikara", image: "/images/about/team/naduni.jpg" },
               { name: "Ranudi Kariyapperuma", image: "/images/about/team/Ranudi.jpg" },
             ].map((member, index) => (
-              <div key={index} className="rounded-lg overflow-hidden shadow-md text-center bg-neutral-900">
+              <div key={index} className="rounded-lg overflow-hidden shadow-md text-center bg-neutral-100">
                 <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-64 object-cover " />
                 <div className="p-4">
                   <h3 className="text-xl font-semibold">{member.name}</h3>
