@@ -141,7 +141,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="mb-16">
+        <section className="mb-16 ">
           <h2 className="text-3xl font-bold mb-6">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -152,7 +152,7 @@ export default function AboutPage() {
               { name: "Naduni Kodikara", image: "/images/about/team/naduni.jpg" },
               { name: "Ranudi Kariyapperuma", image: "/images/about/team/Ranudi.jpg" },
             ].map((member, index) => (
-              <div key={index} className="rounded-lg overflow-hidden shadow-md text-center bg-neutral-100">
+              <div key={index} className="rounded-lg overflow-hidden shadow-md text-center bg-neutral-800">
                 <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-64 object-cover " />
                 <div className="p-4">
                   <h3 className="text-xl font-semibold">{member.name}</h3>
