@@ -1,4 +1,4 @@
-// File: C:\Users\ranud\Downloads\3D_Furniture_web\3d_furnitureweb\app\layout.tsx
+// File: C:\Users\ASUS\Documents\Furnitureweb_3d\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
