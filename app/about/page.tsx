@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row gap-5 items-center">
             <div className="md:w-1/2">
               <p className="text-lg mb-4">
-                Founded in 2010, FurniCraft has been at the forefront of innovative furniture design and customization.
+                Founded in 2010,  DesignSpace has been at the forefront of innovative furniture design and customization.
                 Our mission is to empower customers to create spaces that truly reflect their personality and needs.
               </p>
               <p className="text-lg mb-4">

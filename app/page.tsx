@@ -312,7 +312,7 @@ export default function HomePage() {
           className="text-center mb-12"
         >
           <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-4 text-lime-500">
-            Why Choose FurniCraft?
+            Why Choose DesignSpace?
           </motion.h2>
           <motion.p variants={itemVariants} className="text-xl text-gray-600 max-w-2xl mx-auto">
             Explore the features that make our design platform unique
