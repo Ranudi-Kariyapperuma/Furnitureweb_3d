@@ -109,7 +109,7 @@ export default function Navbar({
                 variant="ghost"
                 size="sm"
                 onClick={onLogout}
-                className="flex items-center gap-1 bg-green-50 hover:bg-green-100 border border-green-200 shadow-sm hover:shadow-green-300/30 transition-all"
+                className="flex items-center gap-1 bg-green-400 hover:bg-green-600 border border-green-200 shadow-sm hover:shadow-green-300/30 transition-all"
               >
                 <LogOut className="h-4 w-4" />
                 Logout

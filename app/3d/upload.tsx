@@ -49,12 +49,12 @@ export default function UploadFurniturePage() {
       <main className="flex-1 flex flex-col items-center justify-center py-8">
         <div className="bg-gray-200 rounded-lg shadow-lg p-8 w-full max-w-4xl">
           <div className="flex justify-between items-center mb-6">
-            <h1 className="text-2xl font-bold">Upload Furniture</h1>
+            <h1 className="text-2xl font-bold ">Upload Furniture</h1>
             <Button variant="outline" onClick={() => router.back()}>Cancel</Button>
           </div>
           <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-1 space-y-4">
-              <div>
+              <div className="text-black">
                 <Label>Furniture Name</Label>
                 <Input value={name} onChange={e => setName(e.target.value)} placeholder="Enter furniture name" />
               </div>
@@ -68,7 +68,7 @@ export default function UploadFurniturePage() {
                   <option value="Custom">Custom</option>
                 </select>
               </div>
-              <div>
+              <div className="text-black">
                 <Label>Description</Label>
                 <Textarea value={description} onChange={e => setDescription(e.target.value)} placeholder="Enter description" />
               </div>
